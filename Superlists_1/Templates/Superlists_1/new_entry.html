@@ -1,0 +1,10 @@
+{% extends "Superlists_1/base.html" %}
+{% block content %}
+<p><a href="{% url 'Superlists_1:topic' topic.id %}">{{ topic }}</a></p>
+<p> Add a new topic: </p>
+<form action="{% url 'Superlists_1:new_entry' topic.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">add topic</button>
+</form>
+{% endblock content %}
