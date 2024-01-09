@@ -14,3 +14,11 @@ class EntryFrom(forms.ModelForm):
         fields = ['text']
         labels = {'text': ''}
         widgets = {'text': forms.Textarea(attrs={'cols': 80})}
+
+
+def plus(a, b):
+    return a+b
+
+
+if __name__ == '__main__':
+    print(plus(6, 7))
